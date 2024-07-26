@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Image Classification Result {% endblock title %}
+
+{% block main-content %}
+<div style="height: 100px;"></div>
+<div class="container h-100">
+    <div class="d-flex justify-content-center h-100">
+        <div class="u_card">
+            <h4>Kidney Stone Detection</h4>
+            <h4>Result:</h4><br>
+            {% if result == 0 %}
+            <h4 style="color: green;">
+                You do not have Kidney Stone
+            </h4>
+            {% elif result == 1 %}
+            <h4 style="color: red;">You Have Knee Stone</h4>
+            {% else %}
+            <h4>Enter your problem first</h4>
+            {% endif %}
+            <br><br>
+            <a class="btn login_btn" href="{% url 'image_upload' %}">Upload Another Image</a>
+        </div>
+    </div>
+</div>
+
+{% endblock main-content %}

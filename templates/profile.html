@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block main-content %}
+<div style="height: 100px;"></div>
+<div class="container h-100">
+    <div class="d-flex justify-content-center h-100">
+        <div class="u_card">
+            <h2>Welcome</h2>
+            <h3>{{ user.username | title }},</h3><br><br>
+            <a class="btn login_btn" href="{% url 'image_upload' %}">Check For Kidney Stone</a>
+        
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock main-content %}
